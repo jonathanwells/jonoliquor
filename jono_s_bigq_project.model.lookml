@@ -7,6 +7,7 @@
 # NOTE: for BigQuery specific considerations
 
 - explore: events
-
 - explore: liquor
+- explore: bike_challenge
+- explore: traffic_tickets
 

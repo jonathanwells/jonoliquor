@@ -32,6 +32,16 @@
     type: string
     sql: ${TABLE}.enddate
 
+  - dimension_group: start
+    type: time
+    timeframes: [date, week, month, year, day_of_week]
+    sql: TIMESTAMP(CONCAT(STRING(${TABLE}.startdate), ':00'))
+    
+  - dimension_group: end
+    type: time
+    timeframes: [date, week, month, year, day_of_week]
+    sql: TIMESTAMP(${TABLE}.enddate)
+
   - dimension: endstation
     type: string
     sql: ${TABLE}.endstation

@@ -13,10 +13,9 @@
     timeframes: [date, week, month, year, day_of_week]
     sql: TIMESTAMP(${TABLE}.date)
 
-  - dimension_group: convenience_store
-    type: time
-    timeframes: [time, date, week, month]
-    sql: ${TABLE}.convenience_store
+  - dimension_group: date
+    type: string
+    sql: ${TABLE}.date
 
   - dimension: store
     type: string
