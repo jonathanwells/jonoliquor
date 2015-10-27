@@ -104,7 +104,7 @@
     
   - measure: average_bottle_price
     type: number
-    sql: ${total_bottle_price} / NULLIF(${count}, 0)
+    sql: ${total_bottle_price} / IFNULL(${count}, 0)
 
   sets:
     detail:
