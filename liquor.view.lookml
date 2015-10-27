@@ -2,7 +2,6 @@
   derived_table:
     sql: |
       SELECT * FROM [fh-bigquery:liquor.iowa]
-      LIMIT 10
 
   fields:
   - measure: count

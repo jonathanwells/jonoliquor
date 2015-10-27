@@ -8,5 +8,5 @@
 
 - explore: events
 
-- explore: json_test3
+- explore: liquor
 
