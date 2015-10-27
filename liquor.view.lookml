@@ -89,6 +89,7 @@
   - dimension: btl_price
     type: number
     sql: ${TABLE}.btl_price
+    decimals: 2
 
   - dimension: bottle_qty
     type: int
@@ -104,7 +105,7 @@
     
   - measure: average_bottle_price
     type: number
-    sql: ${total_bottle_price} / IFNULL(${count}, 0)
+    sql: ${total_bottle_price} / IFNULL(INTEGER(${count}), INTEGER(0))
 
   sets:
     detail:
