@@ -98,6 +98,14 @@
     type: number
     sql: ${TABLE}.total
 
+  - measure: total_bottle_price
+    type: sum
+    sql: ${TABLE}.btl_price
+    
+  - measure: average_bottle_price
+    type: number
+    sql: ${total_bottle_price} / NULLIF(${count}, 0)
+
   sets:
     detail:
       - date
