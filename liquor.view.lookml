@@ -8,9 +8,10 @@
     type: count
     drill_fields: detail*
 
-  - dimension: date
-    type: string
-    sql: ${TABLE}.date
+  - dimension_group: date
+    type: time
+    timeframes: [date, week, month, year, day_of_week]
+    sql: TIMESTAMP(${TABLE}.date)
 
   - dimension_group: convenience_store
     type: time
